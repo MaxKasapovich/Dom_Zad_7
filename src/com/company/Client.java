@@ -34,8 +34,8 @@ public class Client {
             } else {
                 carCredit(price);
             }
-        license();
         }
+        license();
     }
 
     public void carCredit(double price) {
