@@ -18,8 +18,7 @@ public class Client {
             return false;
         }
     }
-
-    public boolean license(boolean driversLicense) {
+    public boolean license() {
         if (driversLicense) {
             System.out.println("Congratulations!, you may pick up yor new car and try it right away!");
             return true;
@@ -30,7 +29,7 @@ public class Client {
     }
 
     public void carSelling(double price) {
-        if (adult() && license(driversLicense)) {
+        if (adult() && license()) {
             if (cash >= price) {
             } else {
                 carCredit(price);
