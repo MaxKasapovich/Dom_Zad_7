@@ -18,25 +18,24 @@ public class Client {
             return false;
         }
     }
-    public boolean license() {
+    public void license() {
         if (driversLicense) {
             System.out.println("Congratulations!, you may pick up yor new car and try it right away!");
-            return true;
         } else {
             System.out.println("Note: When buying a car, you need to be accompanied by a person with a driver's license or order a special vehicle for transporting a car");
-            return false;
         }
     }
 
     public void carSelling(double price) {
-        if (adult() && license()) {
+        license();
+        if (adult()) {
             if (cash >= price) {
+                System.out.println("Dr. " + name + ", congratulations! You can pick up your new car!");
             } else {
                 carCredit(price);
             }
         }
     }
-
     public void carCredit(double price) {
         creditPayment = Math.round((price - cash) / 36);
             if (creditNeed && creditWish) {
