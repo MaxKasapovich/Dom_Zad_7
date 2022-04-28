@@ -22,6 +22,6 @@ public class Main {
         System.out.println("Car: " + car1.carBrand + car1.model);
         client1.carSelling(car1.price);
         client1.carCredit(car1.price);
-        client1.License(client1.driversLicense);
+        client1.license(client1.driversLicense);
     }
 }
