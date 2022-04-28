@@ -18,34 +18,36 @@ public class Client {
             return false;
         }
     }
+
     public void license() {
         if (driversLicense) {
-            System.out.println("Congratulations!, you may pick up yor new car and try it right away!");
+            System.out.println("Great!, you may pick up yor new car and try it right away!");
         } else {
             System.out.println("Note: When buying a car, you need to be accompanied by a person with a driver's license or order a special vehicle for transporting a car");
         }
     }
 
     public void carSelling(double price) {
-        license();
         if (adult()) {
             if (cash >= price) {
-                System.out.println("Dr. " + name + ", congratulations! You can pick up your new car!");
+                System.out.println("Dear " + name + ", Congratulations! We can start to wrap your 'rocket' right about now!");
             } else {
                 carCredit(price);
             }
+        license();
         }
     }
+
     public void carCredit(double price) {
         creditPayment = Math.round((price - cash) / 36);
             if (creditNeed && creditWish) {
-                System.out.println("The monthly loan payment will be:  " + creditPayment + "$ per month.");
-                System.out.println("Dr. " + name + ", congratulations! You can pick up your new credit car!");
+                System.out.println("Monthly loan payment will be:  " + creditPayment + "$.");
+                System.out.println("Dear " + name + ", we have a great news. You can come to our office,get a loan and pick up your new car!");
             } else if (creditNeed && !creditWish) {
-                System.out.println("The monthly loan payment will be: " + creditPayment + "$ per month.");
-                System.out.println("Sorry, come back later, when you will want to buy credit");
+                System.out.println("Monthly loan payment will be: " + creditPayment + "$.");
+                System.out.println("Ok, come back later, when you feel like applying for a loan.");
             } else {
-                System.out.println("Sorry, come back");
+                System.out.println("Ok. Bye. We will be glad to see you again.");
         }
     }
 }
