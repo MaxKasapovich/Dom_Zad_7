@@ -34,6 +34,7 @@ public class Client {
             if (cash >= price) {
                 System.out.println("Dr. " + name + ", congratulations! You can pick up your new car!");
             } else {
+            }
         }
     }
 
@@ -50,4 +51,3 @@ public class Client {
             }
         }
     }
-}
