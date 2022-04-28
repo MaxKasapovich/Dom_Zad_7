@@ -30,9 +30,8 @@ public class Client {
     }
 
     public void carSelling(double price) {
-        if (adult() && license()) {
+        if (adult() && license(driversLicense)) {
             if (cash >= price) {
-                System.out.println("Dr. " + name + ", congratulations! You can pick up your new car!");
             } else {
                 carCredit(price);
             }
