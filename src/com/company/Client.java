@@ -9,7 +9,7 @@ public class Client {
     boolean driversLicense;
     double creditPayment;
 
-    public boolean Adult() {
+    public boolean adult() {
         if (age >= 18) {
             return true;
         } else {
@@ -19,7 +19,7 @@ public class Client {
         }
     }
 
-    public static boolean License(boolean driversLicense) {
+    public boolean License(boolean driversLicense) {
         if (driversLicense) {
             System.out.println("Congratulations!, you may pick up yor new car and try it right away!");
             return true;
@@ -30,24 +30,23 @@ public class Client {
     }
 
     public void carSelling(double price) {
-        if (Adult()) {
+        if (adult()) {
             if (cash >= price) {
                 System.out.println("Dr. " + name + ", congratulations! You can pick up your new car!");
             } else {
-                double creditPayment = Math.round((price - cash) / 36);
-            }
+        }
+    }
 
-            public void carCredit (double creditPayment){
-                double creditPayment = Math.round((price - cash) / 36);
-                if (creditNeed && creditWish) {
-                    System.out.println("The monthly loan payment will be: " + creditPayment + "$ per month.");
-                    System.out.println("Dr. " + name + ", congratulations! You can pick up your new credit car!");
-                } else if (creditNeed && creditWish) {
-                    System.out.println("The monthly loan payment will be: " + creditPayment + "$ per month.");
-                    System.out.println("Sorry, come back later, when you will want to buy credit");
-                } else {
-                    System.out.println("Sorry, come back");
-                }
+    public void carCredit(double price) {
+        creditPayment = Math.round((price - cash) / 36);
+            if (creditNeed && creditWish) {
+                System.out.println("The monthly loan payment will be:  " + creditPayment + "$ per month.");
+                System.out.println("Dr. " + name + ", congratulations! You can pick up your new credit car!");
+            } else if (creditNeed && !creditWish) {
+                System.out.println("The monthly loan payment will be: " + creditPayment + "$ per month.");
+                System.out.println("Sorry, come back later, when you will want to buy credit");
+            } else {
+                System.out.println("Sorry, come back");
             }
         }
     }
