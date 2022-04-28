@@ -21,9 +21,9 @@ public class Client {
 
     public void license() {
         if (driversLicense) {
-            System.out.println("Great!, you may pick up yor new car and try it right away!");
+            System.out.println("Great, having a driver's license will allow you to immediately drive your new car.");
         } else {
-            System.out.println("Note: When buying a car, you need to be accompanied by a person with a driver's license or order a special vehicle for transporting a car");
+            System.out.println("Note: When buying a car, you need to be accompanied by a person with a driver's license or order a special vehicle for transporting a car.");
         }
     }
 

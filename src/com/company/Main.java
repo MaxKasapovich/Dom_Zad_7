@@ -24,7 +24,7 @@ public class Main {
         client2.cash = 20_000.00;
         client2.creditNeed = true;
         client2.creditWish = false;
-        client2.driversLicense = true;
+        client2.driversLicense = false;
 
         Car car2 = new Car();
         car2.carBrand = "Ford";
@@ -66,14 +66,14 @@ public class Main {
 
         System.out.println("Client 2: " + client2.name);
         System.out.println("Car: " + car2.carBrand + car2.model);
-        client1.carSelling(car2.price);
+        client2.carSelling(car2.price);
 
         System.out.println("Client 3: " + client3.name);
         System.out.println("Car: " + car3.carBrand + car3.model);
-        client1.carSelling(car3.price);
+        client3.carSelling(car3.price);
 
         System.out.println("Client 4: " + client4.name);
         System.out.println("Car: " + car4.carBrand + car4.model);
-        client1.carSelling(car4.price);
+        client4.carSelling(car4.price);
     }
 }
